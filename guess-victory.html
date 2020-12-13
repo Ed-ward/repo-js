@@ -10,8 +10,8 @@
  	var answer0 = ("еж");
  	var answer1 = ("ёж");
  	var answer2 = ("ёжик");
- 	var answer3 = ("Календарь");
- 	var answer4 = ("календарь");
+ 	var answer3 = ("календарь");
+ 	var answer4 = ("колендарь");
  	var answer5 = ("календарик");
  	var answer6 = ("подушка");
  	var answer7 = ("заяц");
@@ -20,13 +20,13 @@
  	var answer10 = ("да");
  	var answer11 = ("хочу");
  	var answer12 = ("конечно");
- 	var answer13 = ("да!");
+ 	var answer13 = ("ага");
 
 	alert("Угадайте три загадки");
-	
-	//загадка1
+		//загадка1
 	var userAnswer = prompt(question0);
-	if (userAnswer == answer0 || answer1 || answer2) {
+	userAnswer = userAnswer.toLowerCase();
+	if (userAnswer == answer0 || userAnswer == answer1 || userAnswer == answer2) {
 		alert("Поздравляю, это правильный ответ");
 		trueAnswer++;
 	} else {
@@ -34,7 +34,8 @@
 	}
 	//загадка 2
 	var userAnswer = prompt(question1);
-	if (userAnswer == answer3 || answer4 || answer5) {
+	userAnswer = userAnswer.toLowerCase();
+	if (userAnswer == answer3 || userAnswer == answer4 || userAnswer == answer5) {
 		alert("Точно!");
 		trueAnswer++;
 	} else {
@@ -42,6 +43,7 @@
 	}
 	//загадка 3
 	var userAnswer = prompt(question2);
+	userAnswer = userAnswer.toLowerCase();
 	if (userAnswer == answer6) {
 		alert("Правильно! ");
 		trueAnswer++;
@@ -50,18 +52,19 @@
 	}
 	var bonusQuest =("На три загадки вы дали " + trueAnswer + " правильных ответа. Хотите еще одну?")
 	var userAnswer = prompt(bonusQuest);
-		if (userAnswer == answer10 || answer11 || answer12 || answer13) {
+		if (userAnswer == answer10 || userAnswer == answer11 || userAnswer == answer12 || userAnswer == answer13) {
 			var userAnswer = prompt(question3);
-			if (userAnswer == answer7 || answer8 || answer9) {
-			alert("Ура, это правильный ответ");
+			userAnswer = userAnswer.toLowerCase();
+			if (userAnswer == answer7 || userAnswer == answer8 || userAnswer == answer9) {
+			alert("Ура, это правильный ответ.");
 			trueAnswer++;
 			} else {
-		alert("Увы, это не верный ответ");
+		alert("Увы, это не верный ответ.");
 		};
 	
 	} else {
-		alert("Ну тогда пока! У Вас" + trueAnswer + " правильных ответов");
+		alert("Ну тогда пока! У Вас " + trueAnswer + " правильных ответов.");
 	}
 	
-	document.write("Загадки кончились. " + trueAnswer + " правильных ответов");
+	document.write("Загадки кончились. У Вас " + trueAnswer + " правильных ответов.");
 </script>  
