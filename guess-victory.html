@@ -1,0 +1,67 @@
+<meta charset="UTF-8">
+<script type="text/javascript">
+	var trueAnswer = 0;
+	//questions
+	var question0 = ("Вот иголки и булавки Выползают из-под лавки, На меня они глядят, Молока они хотят.");
+	var question1 = ("На раскрашенных страницах Много праздников хранится.");
+	var question2 = ("Набита пухом, лежит под ухом.");
+	var question3 = ("Летом серый, а зимой белый.");
+ 	// correct answers
+ 	var answer0 = ("еж");
+ 	var answer1 = ("ёж");
+ 	var answer2 = ("ёжик");
+ 	var answer3 = ("Календарь");
+ 	var answer4 = ("календарь");
+ 	var answer5 = ("календарик");
+ 	var answer6 = ("подушка");
+ 	var answer7 = ("заяц");
+ 	var answer8 = ("зайка");
+ 	var answer9 = ("зайчик");
+ 	var answer10 = ("да");
+ 	var answer11 = ("хочу");
+ 	var answer12 = ("конечно");
+ 	var answer13 = ("да!");
+
+	alert("Угадайте три загадки");
+	
+	//загадка1
+	var userAnswer = prompt(question0);
+	if (userAnswer == answer0 || answer1 || answer2) {
+		alert("Поздравляю, это правильный ответ");
+		trueAnswer++;
+	} else {
+		alert("Увы, это не верный ответ");
+	}
+	//загадка 2
+	var userAnswer = prompt(question1);
+	if (userAnswer == answer3 || answer4 || answer5) {
+		alert("Точно!");
+		trueAnswer++;
+	} else {
+		alert("Нет, может другой раз получится");
+	}
+	//загадка 3
+	var userAnswer = prompt(question2);
+	if (userAnswer == answer6) {
+		alert("Правильно! ");
+		trueAnswer++;
+	} else {
+		alert("Да что же такое! Ответ не верный.");
+	}
+	var bonusQuest =("На три загадки вы дали " + trueAnswer + " правильных ответа. Хотите еще одну?")
+	var userAnswer = prompt(bonusQuest);
+		if (userAnswer == answer10 || answer11 || answer12 || answer13) {
+			var userAnswer = prompt(question3);
+			if (userAnswer == answer7 || answer8 || answer9) {
+			alert("Ура, это правильный ответ");
+			trueAnswer++;
+			} else {
+		alert("Увы, это не верный ответ");
+		};
+	
+	} else {
+		alert("Ну тогда пока! У Вас" + trueAnswer + " правильных ответов");
+	}
+	
+	document.write("Загадки кончились. " + trueAnswer + " правильных ответов");
+</script>  
