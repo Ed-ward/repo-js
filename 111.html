@@ -1,0 +1,59 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+function generaText(letters, length){
+
+    var text = '';
+    for(var i = 0; i < length; i++){
+        var n = getRandomNamber(letters.length -1);
+        text = text + letters[n];
+    }
+    return text
+}
+
+function getRandomNamber(max){
+    return Math.round(Math.random()* max);
+}
+
+
+function askesText(a,letter){
+    while(true){
+        alert(a);
+        var text = generaText(letter, 10); //aaфффафаффааа
+        var userText = prompt(text);
+        if(userText == text){
+            alert('Все верно!');
+            break;
+
+        } else {
+            alert('Вы ошиблись. Попробуйте еще раз');
+        }
+    }
+    return 'следующий уровень!';
+}
+alert('вас приветсвует программа по обучению слепой печати');
+
+
+var a =('Положите 4 пальца левой руки - мезинец, безымянный, средний, указательный - на клавиши ф, ы, в, а. Запомните , что буква А находится под вашим указательным пальцем, а Ф - под мизинцем.\nТеперь неспеша набирайте текст. Постарайтесь не смотреть на клавиатуру.');
+var letter=['ф', "а"];
+
+//  var text = generaText(['ф',"а"], 10); //aaфффафаффааа
+//  var userText = prompt(text);
+//  alert(askesText(text,userText));
+
+
+
+
+var b = ('Поставьте мизинец левой руки на букву Ф, безымянный палец — на Ы, средний — на В, указательный — на А. Мизинец правой руки на букву Ж, безымянный палец — на Д, средний — на Л, указательный — на О. Запомните расположение пальцев. Повторяйте за мной');
+
+var letter1= ['ы', "в"];
+
+var c = ('Поставьте мизинец левой руки на букву Ф, безымянный палец — на Ы, средний — на В, указательный — на А. Мизинец правой руки на букву Ж, безымянный палец — на Д, средний -— на Л, указательный — на О. Запомните расположение пальцев');
+
+var letter2= ['о', "ж"];
+
+
+
+alert(askesText(a,letter));
+alert(askesText(b,letter1));
+alert(askesText(c,letter2));
+</script>
