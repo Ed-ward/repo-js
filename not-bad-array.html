@@ -7,8 +7,49 @@
 
 	alert("запомните числа и их порядок: " + numbers);
 
+	var userAnswer = +prompt("Каким было первое число?");
 
+	//alert(numbers[0]); //42
 
-	
+	if(userAnswer == numbers[0]){
+		alert("Всё верно!");
+	}
+	else {
+		alert("А вот и нет. Правильный ответ " + numbers[0])
+	}
+
+	userAnswer = +prompt("А последнее?");
+
+	/**
+	if(userAnswer == numbers[4]){  //плохой запрос, если длина массива изменится это будет не последний.
+		alert("Всё верно!");
+	}
+	else {
+		alert("А вот и нет. Правильный ответ " + numbers[4])
+	}
+	**/
+
+	//alert(numbers.length); // покажет длину массива (5)
+	//alert(numbers[numbers.length - 1]); // считаем от 0, поэтому -1 и это равно numbers[4] в этом массиве
+
+	if(userAnswer == numbers[numbers.length - 1]){
+		alert("Всё верно!");
+	}
+	else {
+		alert("А вот и нет. Правильный ответ " + numbers[numbers.length - 1])
+	}
+
+	//сгенерим произвольное число от 1 до 5 и спросим у юзера соответствующее число из массива.
+
+	var n = parseInt(Math.random() * numbers.length); // it`s more better
+
+	userAnswer = +prompt("А как насчет числа под номером " + (n + 1) + "?");
+
+	if(userAnswer == numbers[n]){
+		alert("Всё верно!");
+	}
+	else {
+		alert("А вот и нет. Правильный ответ " + numbers[n])
+	}
 
 </script>  
