@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+<script type="text/javascript">
+
+	/** два массива для сопоставления не очень удобны.
+	var english = ["food", "bike", "apple", "do", "mean"];
+	var russian = ["еда", "велосипед", "яблоко", "делать", "иметь в виду"];
+	**/
+
+	//лучше сделаем многомерный массив (несколько массивов внутри другого массива)
+	var words = [
+		["food", "еда"],
+		["bike", "велосипед"],
+		["apple", "яблоко"],
+		["do", "делать"],
+		["mean", "иметь в виду"],
+	];
+
+	var i = parseInt(Math.random() * words.length); 
+	alert(i);
+	var userTranslate = prompt("Как переводится слово: " + words[i][0]);
+	if(userTranslate == words[i][1]){
+		alert("Правильно!");
+	} else {
+		alert("Правильный ответ " + words[i][1]);
+	}
+
+
+
+
+
+/**
+ 	//так достаются значения из массива
+	alert(words[0]); //"food", "еда"
+	alert(words[1]); //"bike", "велосипед"
+	alert(words[0][0]); //"food"
+	alert(words[0][1]); //"еда"
+	alert(words[0][3]); //undefined
+**/	
+
+
+
+
+
+</script>  
