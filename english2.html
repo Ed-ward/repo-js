@@ -1,0 +1,51 @@
+<meta charset="UTF-8">
+<script type="text/javascript">
+
+	/** тут пока два уровня и чтобы не повторяться 
+	опрос юзера будет выполяться функцией
+	**/
+	function askForWords(words){
+			while(words.length != 0){
+			var i = parseInt(Math.random() * words.length); 
+			var userTranslate = prompt("Как переводится слово: " + words[i][0]);
+			if(userTranslate == words[i][1]){
+				alert("Правильно!");
+				words.splice(i, 1); //удаляет указанное число строк начаная с i
+			} else {
+				alert("Правильный ответ " + words[i][1]);
+			}
+		}
+
+	}
+	
+	var easyWords = [
+		["food", "еда"],
+		["bike", "велосипед"],
+		["apple", "яблоко"],
+		["do", "делать"],
+		["mean", "иметь в виду"],
+	];
+
+askForWords(easyWords);
+
+	alert(" Поздравляем, Вы запомнили все слова! \n Переходим на следующий уровень!");
+
+var hardWords = [
+		["chainsaw", "бензопила"],
+		["squirrel", "белка"],
+		["castle", "замок"],
+		["homeland", "родина"],
+		["sewerage", "канализация"],
+		["bottom", "дно"]
+	];
+
+askForWords(hardWords);
+
+
+	alert("Поздравляем, Вы запомнили все слова!");
+
+
+
+
+
+</script>  
