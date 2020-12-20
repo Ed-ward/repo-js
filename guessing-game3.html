@@ -1,20 +1,27 @@
 <meta charset="UTF-8">
 <script type="text/javascript">
 	
-	function askQuestion(question, answer){
+	function askQuestion(question, answers){
 		var userAnswer = prompt(question);
 		userAnswer = userAnswer.toLowerCase();
-		if(userAnswer == answer){
-			alert("Это правильный ответ.");
-			score++;
+
+		for(var i = 0; i < answers.length; i++){
+			
+			if(userAnswer == answers[i]){
+					alert("Это правильный ответ.");
+					score++;
+					return;
+				}
+
 		}
-		else
-			alert("Вы не угадали.");
+
+		alert("Вы не угадали.");
 	}
+
 
 	var score = 0;
 	//если сравниваем с массивом то происходит последовательное сравнение с каждым его элементом
-	askQuestion("Вот иголки и булавки Выползают из-под лавки, На меня они глядят, Молока они хотят.",["еж","ёж","ёжик"]);
+	askQuestion("Вот иголки и булавки Выползают из-под лавки, На меня они глядят, Молока они хотят.",["ёж","еж","ёжик"]);
 	askQuestion("На раскрашенных страницах много праздников хранится.", ["календарь","колендарь","календарик"]);
 	askQuestion("Набита пухом, лежит под ухом.", ["подушка","падушка"]);
 	askQuestion("Летом серый, а зимой белый.", ["заяц","зайка","зайчик"]);
