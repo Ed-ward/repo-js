@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+<script type="text/javascript">
+	
+	function askQuestion(question, answers){
+		var userAnswer = prompt(question);
+		userAnswer = userAnswer.toLowerCase();
+		for(var i = 0; i < answers.length; i++){
+			
+			if(userAnswer == answers[i]){
+					alert("Это правильный ответ.");
+					score++;
+					return;
+				}
+
+		}
+			alert("Вы не угадали.");
+	}
+
+	var questions = [
+	["Вот иголки и булавки Выползают из-под лавки, На меня они глядят, молока они хотят.",["ёж", "еж", "ёжик"]],
+	["На раскрашенных страницах много праздников хранится.", ["календарь", "колендарь", "календарик"]],
+	["Набита пухом, лежит под ухом.", ["подушка", "падушка"]],
+	["Летом серый, а зимой белый.", ["заяц", "зайка", "зайчик"]],
+	["Без окон, без дверей, полна горница гостей", ["огурец", "агурец"]],
+	];
+
+	var score = 0;
+	for(var i = 0; i < questions.length; i++){
+		var quest = questions[i][0];
+		var answers = questions [i][1];
+		askQuestion(quest, answers);
+	}
+
+	alert ("Вы угадали " + score + " загадок.");
+
+</script>  
+
+
